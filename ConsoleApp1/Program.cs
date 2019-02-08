@@ -10,8 +10,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-
         }
     }
+    class Node
+    {
+        public Node() { }
+        Node floor;
+        Node elevatorUp;
+        string FloorNumber;
+    }
+    class elevator
 }
