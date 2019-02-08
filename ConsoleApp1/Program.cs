@@ -15,9 +15,25 @@ namespace ConsoleApp1
     class Node
     {
         public Node() { }
-        Node floor;
-        Node elevatorUp;
-        string FloorNumber;
+        public Node floor;
+        public Node elevatorUp;
+        public string FloorNumber;
     }
-    class elevator 
+    class elevator
+    {
+        Node FirstFloor;
+        Node SecondFloor;
+        Node ThirdFloor;
+        Node FourthFloor; 
+
+        public void run()
+        {
+            FirstFloor = new Node();
+            FirstFloor.FloorNumber = "First Floor";
+            FirstFloor.elevatorUp = SecondFloor;
+            SecondFloor.FloorNumber = "Second Floor";
+            Console.WriteLine("floor number is {0} ", SecondFloor.FloorNumber);
+
+        }
+    }
 }
