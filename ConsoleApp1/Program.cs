@@ -19,5 +19,5 @@ namespace ConsoleApp1
         Node elevatorUp;
         string FloorNumber;
     }
-    class elevator
+    class elevator 
 }
