@@ -10,6 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            elevator e = new elevator();
+            Console.Read();
         }
     }
     class Node
@@ -30,6 +32,7 @@ namespace ConsoleApp1
         {
             FirstFloor = new Node();
             FirstFloor.FloorNumber = "First Floor";
+            Console.WriteLine("floor number is {0} ", FirstFloor.FloorNumber);
             FirstFloor.elevatorUp = SecondFloor;
             SecondFloor.FloorNumber = "Second Floor";
             Console.WriteLine("floor number is {0} ", SecondFloor.FloorNumber);
