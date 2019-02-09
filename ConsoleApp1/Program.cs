@@ -21,6 +21,11 @@ namespace ConsoleApp1
         public Node elevatorUp;
         public string FloorNumber;
     }
+
+    class department
+    {
+
+    }
     class elevator
     {
         Node Head;
