@@ -10,8 +10,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            elevator e = new elevator();
-            e.run();
+            BubbleWSort bs = new BubbleWSort();
+
+            bs.run();
+
+            Console.ReadLine();
         }
     }
     class Node
@@ -31,6 +34,7 @@ namespace ConsoleApp1
             DepartmentDescription = dept_name;
 
         }
+        public Department nextDepartment;
         public Department aDepartment;
         string DepartmentDescription;
     }
@@ -40,6 +44,9 @@ namespace ConsoleApp1
         {
             Department Kitchenware = new Department("Kitchenware");
             Department Books = new Department("Books");
+            Kitchenware.nextDepartment = Books;
+            //Kitchenware.previousDepartment = FirstFloor;
+            
         }
     }
     class elevator { 
@@ -87,4 +94,55 @@ namespace ConsoleApp1
             }
         }
     }
+    class BubbleWSort
+    {
+
+        public void run()
+
+        {
+
+            int[] ar = new int[5] { 4, 5, 6, 2, 3 };
+
+            int mid = 0, temp = 0;
+
+
+
+            for (int i = 0; i < ar.Length; i++)
+
+            {
+
+
+
+                for (int j = 0; j < ar.Length - 1; j++)
+
+                {
+
+                    temp = 0;
+
+                    if (ar[j] > ar[j + 1])
+
+                    {
+
+                        temp = ar[j + 1];
+
+                        ar[j + 1] = ar[j];
+
+                        ar[j] = temp;
+
+                    }
+
+                }
+
+
+
+            }
+
+            for (int i = 0; i < ar.Length; i++)
+
+            {
+
+                Console.Write("{0} ", ar[i]);
+
+            }
+        }
 }
