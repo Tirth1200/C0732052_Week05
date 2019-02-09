@@ -23,6 +23,7 @@ namespace ConsoleApp1
     }
     class elevator
     {
+        Node Head;
         Node FirstFloor;
         Node SecondFloor;
         Node ThirdFloor;
@@ -49,6 +50,20 @@ namespace ConsoleApp1
             FourthFloor.FloorNumber = "Fourth Floor";
             Console.WriteLine("floor number is {0} ", FourthFloor.FloorNumber);
             FourthFloor.elevatorUp = null;
+        }
+
+        public void traverseList()
+        {
+            Node temp;
+            temp = Head.elevatorUp;
+            // Where am I going to Start?
+            Console.WriteLine("The first floor is " + Head.FloorNumber);
+            while (temp != null)
+            {
+                // NOW GET TO THE SECOND FLOOR!!!
+                temp = temp.elevatorUp;
+                Console.WriteLine(temp.FloorNumber);
+            }
         }
     }
 }
