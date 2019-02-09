@@ -49,7 +49,6 @@ namespace ConsoleApp1
             FourthFloor.FloorNumber = "Fourth Floor";
             Console.WriteLine("floor number is {0} ", FourthFloor.FloorNumber);
             FourthFloor.elevatorUp = null;
-
         }
     }
 }
