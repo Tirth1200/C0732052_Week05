@@ -22,12 +22,28 @@ namespace ConsoleApp1
         public string FloorNumber;
     }
 
-    class department
+    class Department
     {
+        public Department(string dept_name)
 
+        {
+
+            DepartmentDescription = dept_name;
+
+        }
+        public Department aDepartment;
+        string DepartmentDescription;
     }
-    class elevator
+    class DepartmentStore
     {
+        public void InitializeDepartments()
+        {
+            Department Kitchenware = new Department("Kitchenware");
+            Department Books = new Department("Books");
+        }
+    }
+    class elevator { 
+    
         Node Head;
         Node FirstFloor;
         Node SecondFloor;
